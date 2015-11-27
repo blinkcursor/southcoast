@@ -1,0 +1,1284 @@
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: Hanna Child
+	Template: hanna
+	Theme URI: http://themezilla.com/themes/hanna
+	Author: Nigel Anderson & Themezilla
+	Author URI: about.me/nigelanderson
+	Description: Custom version of Hanna theme for South Coast surf school
+	Version: 1.0
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: hanna-child
+----------------------------------------------------------------------------------- */
+
+/* DEFINE COLOURS
+   ========================================================================== */
+$sc-brand-blue:				#004e88;
+$sc-brand-crimson:			#dc0048;
+
+$color-celeste:				#74ecf2;
+$color-arena:				#e9c490;
+
+$kontiki-brown: 			#61210f;
+$kontiki-orange: 			#f75c03;
+$kontiki-green: 			#4f9b20;
+
+//bungalows
+$kontiki-arena:				#b80012; //rojo
+$kontiki-mar:				#51c8cf; //turqesa
+$kontiki-sol:				#f2ba02; //amarillo
+$kontiki-cielo:				#004e88; //brand-blue
+
+// set colors
+
+$color-primary:				$color-celeste;
+$color-secondary:			$color-arena;
+
+$base-font:					#181818;
+$sidebar-background:		#f5f5f5;
+
+$menu-text:					$sc-brand-blue;
+$menu-text-hover:			$sc-brand-crimson;
+
+$sc-site-body:				$color-primary;
+$sc-page-headings-bkgd:		$color-secondary;
+$sc-page-headings-text:		$sc-brand-blue;
+
+$pricing-table-default:		$color-primary;
+$pricing-table-default-hover:	lighten($color-primary, 15%);
+$pricing-table-header:		$sc-brand-blue;
+
+
+$kontiki-headings-background:	$kontiki-brown;
+
+$footer-porque-background:	$color-primary;
+$footer-porque-border:		lighten($color-primary, 5%);
+$footer-porque-hover:		lighten($color-primary, 15%);
+$footer-porque-text-bkgd:	darken($color-primary, 5%);
+$footer-porque-text:		$sc-brand-blue;
+
+
+/* ==========================================================================
+   THEME CUSTOMISATION STARTS HERE
+   ========================================================================== */
+
+.color-arena {
+	color: $kontiki-arena;
+}
+.color-mar {
+	color: $kontiki-mar;
+}
+.color-cielo {
+	color: $kontiki-cielo;
+}
+.color-sol {
+	color: $kontiki-sol;
+}
+
+
+/* helpers */
+.center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+/*
+.lede {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+*/
+.underline {
+	text-decoration: underline;
+}
+
+
+@media(min-width: 1400px) {
+	body {
+		background-color: $sc-site-body;
+	}
+	body.kontiki {
+		background-color: $kontiki-green;
+	}
+}
+
+/* Font overrides -- Default text Quicksand -> Open Sans
+   ========================================================================== */
+
+body,
+button,
+input,
+select,
+textarea {
+  color: $base-font;
+  font: 16px/1.6 "Open Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+blockquote cite {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: "Open Sans", sans-serif;
+}
+
+.blog .entry-title,
+.archive .entry-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-size: 1.7rem;
+}
+
+.entry-title span.entry-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+.portfolio-feed .entry-title,
+.portfolio-feature-wrapper .entry-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+#content .zilla-button,
+#content .zilla-button:visited {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Font overrides -- Headline text  Lora -> Pacifico
+   ========================================================================== */
+
+h1 {
+  font-family: "Pacifico", serif;
+  font-size: 42px;
+  font-size: 4.2rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: "Pacifico", serif;
+  font-size: 30px;
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+h3, h4, h5, h6 {
+	font-family: "Capriola", serif;
+}
+
+blockquote {
+  font-family: 'Pacifico', serif;
+  font-size: 27px;
+  font-size: 2.7rem;
+  font-weight: normal;
+}
+
+.blog .format-standard .entry-title,
+.archive .format-standard .entry-title {
+  font-family: "Pacifico", serif;
+  font-size: 30px;
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.hamburger-text {
+	font-family: "Capriola", sans-serif;
+}
+
+/* MENU FONT-STYLING OVERRIDES
+   ========================================================================== */
+.primary-menu a  {
+	font-family: "Capriola", sans-serif;
+	font-size: 15px;
+	font-size: 1.5rem;
+	color: $menu-text;
+}
+.primary-menu a:visited {
+	color: $menu-text;	
+} 
+
+.primary-menu a:hover, .primary-menu .sfHover > a, .primary-menu .current-menu-item > a {
+	color: $menu-text-hover;
+}
+
+.primary-menu .sub-menu {
+	border: 1px solid #c5c5c5;
+	text-align: right;
+}
+
+.primary-menu .sub-menu:after {
+	border-bottom: 8px solid #c5c5c5;
+}
+
+.primary-menu > li > .sf-with-ul:after {
+	width: 8px;
+	height: 4px;
+}
+
+.primary-menu > li {
+	margin-left: 25px;
+}
+
+
+.site-header {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.site-logo img {
+	max-height: none;
+}
+
+.zilla-mobile-menu-wrap {
+	height: 105px;
+}
+
+
+/* make sure Home still visible on small screens */
+.zilla-mobile-menu > #menu-item-735, .zilla-mobile-menu > #menu-item-61, .zilla-mobile-menu > #menu-item-91, .zilla-mobile-menu > #menu-item-722  {
+	margin-top: 50px;
+}
+
+@media (min-width: 48em) {
+	.site-logo {
+		float: left;
+		width: auto;
+		height: auto;
+	}
+	.site-navigation {
+		width: 100%;
+		float: none;
+	}
+
+	/* Show home icon instead of 'Inicio' */
+	#menu-item-61 > a:before, #menu-item-735 > a:before {
+		content: "\f102";
+		font-family: dashicons;
+		font-size: 32px;
+		line-height: 1;
+		color: inherit;
+	}
+	#menu-item-61 > a, #menu-item-735 > a {
+		width: 32px;
+		height: auto;
+		overflow: hidden;
+		padding-top: 4px;
+		padding-bottom: 2px;
+	}
+
+	/* Show home icon as well as South Coast on Kontiki menu */
+	#menu-item-91 > a:before, #menu-item-722 > a:before {
+		content: "\f102";
+		font-family: dashicons;
+		font-size: 32px;
+		line-height: 1;
+		vertical-align: bottom;
+		padding-right: 4px;
+		color: inherit;
+	}
+	#menu-item-91 > a, #menu-item-722 > a {
+		margin-top: -8px;
+	}
+
+	/* Bump last two menu items to line above to save horizontal space */
+	.site-navigation {
+		margin-top: 2em;
+	}
+	.shrinkit .site-navigation {
+		margin-top: 1.5em;
+	}
+	.site-header {
+		padding: 20px 0;
+	}
+	.site-header.shrinkit {
+		padding: 4px 0;
+	}
+
+	.zilla-sf-menu > li.menu-last, .zilla-sf-menu > li.menu-last-1 {
+		float: right;
+		top: -5.5em;
+		clear: left;
+	}
+	.shrinkit .zilla-sf-menu > li.menu-last, .shrinkit .zilla-sf-menu > li.menu-last-1 {
+		top: -5em;
+	}
+	.zilla-sf-menu > li.menu-last > a, .zilla-sf-menu > li.menu-last-1 > a {
+		font-family: "Open Sans", sans-serif;
+		font-weight: 700;
+	}
+	.primary-menu {
+		height: 44px;
+	}
+}
+/* Bump third-to-last menu item to line above when necessary
+   ========================================================================== */
+@media (min-width: 48em) and (max-width: 56em) {
+
+	.zilla-sf-menu > li.menu-last-2 {
+		float: right;
+		top: -5.5em;
+		clear: left;
+	}
+	.shrinkit .zilla-sf-menu > li.menu-last-2 {
+		top: -5em;
+	}
+	.zilla-sf-menu > li.menu-last-2 > a {
+		font-family: "Open Sans", sans-serif;
+		font-weight: 700;
+	}
+}
+
+/* Tweaks to the hamburger menu to add text
+   ========================================================================== */
+.zilla-mobile-menu-dropdown > .bars {
+	padding-left: 1em;
+}
+.hamburger-text {
+	display: table-cell;
+	vertical-align: middle;
+	color: #333;
+	padding-left: 1em;
+}
+
+/* ==========================================================================
+   ADD-SIDEBAR TO HOME PAGE with LATEST POSTS
+   ========================================================================== */
+.sidebar {
+	background-color: $sidebar-background;
+	margin-bottom: 0;
+	padding: 4em 1em;
+}
+
+.sidebar-logo {
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+.ultimas-entradas {
+	max-width: 1160px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ultimas-entradas > h3 {
+	color: $sc-brand-blue;
+	margin-top: 1em;
+}
+
+.post.sticky {
+	box-shadow: 0 0 0 1px darken($color-arena, 15%);
+	border-radius: 2px;
+}
+
+.home .post {
+	width: 96%;
+}
+
+.home .post .entry-header {
+	margin: 0 0 10px;
+	width: 100%;
+}
+.home .post .entry-thumbnail {
+	margin-bottom: 0;
+}
+.home .post .entry-header .entry-title-wrapper {
+	margin: 15px 20px 10px;
+}
+.home .post .entry-meta {
+	display: none;
+}
+.home .post hr {
+	display: none;
+}
+.home article.page {
+	padding-bottom: 0;
+}
+
+@media (min-width: 48em) {
+	.home.page .entry-content {
+		float: left;
+		width: 66%;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	.sidebar {
+		float: right;
+		width: 33%;
+		padding: 1.2em 0;
+		margin: -1.4em 1% 0 0;
+	}
+}
+
+.panel {
+	font-family: "Capriola", serif;
+	text-align: center;
+	padding: 3em 1em;
+	padding: 3rem 1rem;
+	font-size: 24px;
+	font-size: 2.4rem;
+	color: $sc-brand-blue;
+	background-color: #f0f0f0;
+}
+
+.panel.panel--margen {
+	margin-bottom: 1em;
+}
+
+.panel--rojo {
+	background-color: $sc-brand-crimson;
+}
+.panel--margen.panel--rojo {
+	background-color: #f0f0f0;
+	border-left: 20px solid $sc-brand-crimson;
+	color: $sc-brand-crimson;
+}
+
+.panel--azul {
+	background-color: $sc-brand-blue;
+}
+.panel--margen.panel--azul {
+	background-color: #f0f0f0;
+	border-left: 20px solid $sc-brand-blue;
+	color: $sc-brand-blue;
+}
+
+.panel--azul-oscuro {
+	background-color: darken($sc-brand-blue, 5%);
+}
+.panel--margen.panel--azul-oscuro {
+	background-color: #f0f0f0;
+	border-left: 20px solid darken($sc-brand-blue, 5%);
+	color: darken($sc-brand-blue, 5%);
+}
+
+.panel--azul-claro {
+	background-color: lighten($sc-brand-blue, 5%);
+}
+.panel--margen.panel--azul-claro {
+	background-color: #f0f0f0;
+	border-left: 20px solid lighten($sc-brand-blue, 5%);
+	color: lighten($sc-brand-blue, 5%);
+}
+
+.panel--verde {
+	background-color: $kontiki-green;
+}
+.panel--margen.panel--verde {
+	background-color: #f0f0f0;
+	border-left: 20px solid $kontiki-green;
+	color: $kontiki-green;
+}
+
+.panel--marron {
+	background-color: $kontiki-brown;
+	color: #fff;
+}
+.panel--margen.panel--marron {
+	background-color: #f0f0f0;
+	border-left: 20px solid $kontiki-brown;
+	color: $kontiki-brown;
+}
+
+.panel--marron a, .panel--marron a:visited {
+	color: $kontiki-green;
+}
+.panel--marron a:hover {
+	color: darken($kontiki-green, 5%);
+}
+
+.panel--celeste {
+	background-color: $color-celeste;
+}
+.panel--margen.panel--celeste {
+	background-color: #f0f0f0;
+	border-left: 20px solid $color-celeste;
+	color: $color-celeste;
+}
+.panel--celeste a, .panel--celeste a:visited {
+	color: $sc-brand-crimson;
+}
+.panel--celeste a:hover {
+	color: darken($sc-brand-crimson, 5%);
+}
+
+.panel--celeste-oscurito {
+	background-color: darken($color-celeste, 5%);
+}
+.panel--celeste-oscurito a, .panel--celeste-oscurito a:visited {
+	color: $sc-brand-crimson;
+}
+.panel--celeste-oscurito a:hover {
+	color: darken($sc-brand-crimson, 5%);
+}
+
+.panel--celeste-oscuro {
+	background-color: darken($color-celeste, 15%);
+}
+.panel--celeste-oscuro a, .panel--celeste-oscuro a:visited {
+	color: $sc-brand-crimson;
+}
+.panel--celeste-oscuro a:hover {
+	color: darken($sc-brand-crimson, 5%);
+}
+
+
+.panel--arena {
+	background-color: $color-arena;
+	color: $sc-brand-blue;
+}
+.panel--margen.panel--arena {
+	background-color: #f0f0f0;
+	border-left: 20px solid $color-arena;
+	color: $sc-brand-blue;
+}
+.panel--arena a, .panel--arena a:visited {
+	color: $sc-brand-crimson;
+}
+.panel--arena a:hover {
+	color: lighten($sc-brand-crimson, 5%);
+}
+
+
+.panel > h1 {
+	color: $sc-brand-blue;
+	margin-bottom: 0;
+}
+
+.panel > p {
+	margin-bottom: 0;
+}
+
+.panel.divertir {
+	margin-bottom: 1em;
+}
+
+/* Stop scroll-blocking by google map on touch devices with small screens
+   ========================================================================== */
+.contact-map {
+	position: relative;
+}
+@media (max-width: 48em) {
+	.cover-map {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 9;
+		opacity: 0.2;
+		background-color: #fff;
+	}
+	.contact-map.active {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.contact-map.active > .cover-map {
+		display: none;
+	}
+}
+
+/* Style the content on the como-llegar page
+   ========================================================================== */
+.sc-como-llegar-container {
+	float: left;
+	width: 50%;
+	padding: 0 2em;
+}
+@media (max-width: 48em) {
+	.sc-como-llegar-container {
+		float: none;
+		width: 100%;
+		padding-top: 2em;
+	}	
+}
+
+/* Tweak the gallery pager links to make bigger, more visible
+   ========================================================================== */
+.zilla-gallery-pager a {
+	width: 28px;
+	height: 28px;
+	margin: 0 8px;
+	border: 2px solid #fff;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.3);
+}
+.blog .zilla-gallery-pager a, .post .zilla-gallery-pager a {
+	width: 14px;
+	height: 14px;
+	border: 1px solid #fff;
+}
+.entry-content .zilla-gallery-pager a {
+	width: 18px;
+	height: 18px;
+	border: 2px solid #fff;
+}
+
+
+/* Style gallery captions
+   ========================================================================== */
+.zilla-gallery-container .wp-caption {
+	display: none;
+}
+
+.zilla-gallery-container {
+	max-width: 1400px;
+}
+.zilla-gallery-container:after {
+	display: none;
+}
+
+.home #primary .zilla-gallery-container {
+	max-width: 780px;
+	margin-bottom: 1em;
+}
+
+
+/* STYLE PRICING TABLES
+   ========================================================================== */
+
+.pricingtables {
+	margin: 0;
+	padding: 1em 2em;
+	text-align: center;
+}
+
+.pricingtable {
+	display: inline-block;
+	width: 30.33%;
+	min-width: 300px;
+	max-width: 400px;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	margin-bottom: 4em;
+	list-style: none;
+	vertical-align: top;
+}
+@media (max-width: 48em) {
+	.pricingtable {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.pricingtable .dashicons {
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+	font-size: 28px;
+}
+
+.pricing__header > img {
+	max-width: 100%;
+	width: 100%;
+	max-height: 200px;
+	border: 2px solid $pricing-table-default;
+}
+	.pricing__header--secondary > img {
+		border: 2px solid $color-secondary;
+	}
+	.pricing__header.bungalow-arena > img {
+		border: 2px solid $kontiki-arena;
+	}
+	.pricing__header.bungalow-mar > img {
+		border: 2px solid $kontiki-mar;
+	}
+	.pricing__header.bungalow-sol > img {
+		border: 2px solid $kontiki-sol;
+	}
+	.pricing__header.bungalow-cielo > img {
+		border: 2px solid $kontiki-cielo;
+	}
+
+.pricing__header > h3 {
+	background-color: $pricing-table-default;
+	color: $pricing-table-header;
+	text-align: center;
+	padding: 0.5em 0;
+	margin-bottom: 0;
+}
+	.pricing__header--secondary > h3 {
+		background-color: $color-secondary;
+	}
+	.pricing__header.bungalow-arena > h3 {
+		background-color: $kontiki-arena;
+		color: #fff;
+	}
+	.pricing__header.bungalow-mar > h3 {
+		background-color: $kontiki-mar;
+		color: #fff;
+	}
+	.pricing__header.bungalow-sol > h3 {
+		background-color: $kontiki-sol;
+		color: #fff;
+	}
+	.pricing__header.bungalow-cielo > h3 {
+		background-color: $kontiki-cielo;
+		color: #fff;
+	}
+
+
+.pricing__header > *:first-child {
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+
+.pricing__body {
+	border: 2px solid $pricing-table-default;
+	padding: 1em;
+	min-height: 260px;
+}
+
+.page-cursos-de-surf .pricing__body, .page-alquiler-material .pricing__body {
+	min-height: 200px;
+}
+
+	.pricing__body--secondary {
+		border: 2px solid $color-secondary;
+	}
+	.pricing__body.bungalow-arena {
+		border: 2px solid $kontiki-arena;
+	}
+	.pricing__body.bungalow-mar {
+		border: 2px solid $kontiki-mar;
+	}
+	.pricing__body.bungalow-sol {
+		border: 2px solid $kontiki-sol;
+	}
+	.pricing__body.bungalow-cielo {
+		border: 2px solid $kontiki-cielo;
+	}
+
+.pricing__footer {
+	margin: 0;
+}
+
+.pricing__footer > li {
+	list-style: none;
+	padding: 1em 0;
+	color: $sc-brand-blue;
+	font-size: 1.25em;
+	text-align: center;
+}
+
+.kontiki .pricing__footer > li {
+	color: #fff;
+}
+
+.pricing__footer > li:last-child {
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+}
+
+.pricing__footer p {
+	margin-bottom: 0;
+}
+
+
+.striped--primary {
+	border-bottom: 1px solid lighten($color-primary, 15%);
+}
+.striped--primary:last-child {
+	border-bottom: none;
+}
+
+.striped--primary:nth-child(odd) {
+	background-color: $color-primary;
+}
+.striped--primary:nth-child(even) {
+	background-color: lighten($color-primary, 5%);
+}
+
+.striped--secondary {
+	border-bottom: 1px solid lighten($color-secondary, 15%);
+}
+.striped--secondary:last-child {
+	border-bottom: none;
+}
+.striped--secondary:nth-child(odd) {
+	background-color: $color-secondary;
+}
+.striped--secondary:nth-child(even) {
+	background-color: lighten($color-secondary, 5%);
+}
+
+.striped--arena {
+	border-bottom: 1px solid lighten($kontiki-arena, 15%);
+}
+.striped--arena:last-child {
+	border-bottom: none;
+}
+.striped--arena:nth-child(odd) {
+	background-color: $kontiki-arena;
+}
+.striped--arena:nth-child(even) {
+	background-color: lighten($kontiki-arena, 5%);
+}
+
+
+.striped--mar {
+	border-bottom: 1px solid lighten($kontiki-mar, 15%);
+}
+.striped--mar:last-child {
+	border-bottom: none;
+}
+.striped--mar:nth-child(odd) {
+	background-color: $kontiki-mar;
+}
+.striped--mar:nth-child(even) {
+	background-color: lighten($kontiki-mar, 5%);
+}
+
+.striped--sol {
+	border-bottom: 1px solid lighten($kontiki-sol, 15%);
+}
+.striped--sol:last-child {
+	border-bottom: none;
+}
+.striped--sol:nth-child(odd) {
+	background-color: $kontiki-sol;
+}
+.striped--sol:nth-child(even) {
+	background-color: darken($kontiki-sol, 5%);
+}
+
+.striped--cielo {
+	border-bottom: 1px solid lighten($kontiki-cielo, 15%);
+}
+.striped--cielo:last-child {
+	border-bottom: none;
+}
+.striped--cielo:nth-child(odd) {
+	background-color: $kontiki-cielo;
+}
+.striped--cielo:nth-child(even) {
+	background-color: lighten($kontiki-cielo, 5%);
+}
+
+
+.pricingtable a {
+	color: $pricing-table-header;
+}
+.pricingtable a:hover {
+	color: darken($color-primary, 15%);
+}
+.kontiki .pricingtable a {
+	color: #fff;
+}
+
+
+.pricing__header--secondary a:hover {
+	color: lighten($color-secondary, 15%);
+}
+.pricing__footer--secondary a:hover {
+	color: lighten($color-secondary, 15%);
+}
+
+/* Title over featured image on blog post entries
+   ========================================================================== */
+@media (min-width: 48em) {
+	.single .has-post-thumbnail.format-standard .entry-header .entry-title-wrapper {
+		background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0,0.33);
+		bottom: 0;
+		padding: 2em 0;
+	}
+}
+
+
+/* CREATE A 'CORSET' on PAGES
+   Add class 'ancho' to items to keep full-width
+   Or wrap content in shortcode ancho
+   ========================================================================== */
+.page .entry-content > *:not(.ancho) {
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ancho {
+	margin-bottom: 1em;
+}
+
+.corset {
+	max-width: 1160px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* RESTYLE PAGE HEADINGS
+   ========================================================================== */
+article.page > .entry-thumbnail {
+	margin-bottom: 0;
+}
+article.page > .entry-header {
+	margin: 0 0 4em 0;
+	width: 100%;
+	max-width: 1400px;
+	padding: 4em 0;
+	background-color: $sc-page-headings-bkgd;
+	background-image: url("/wp-content/themes/hanna/images/textura-arena.jpg");
+	background-position: center center;
+}
+.kontiki article.page > .entry-header, .kontiki article.page > .entry-header {
+	background-color: $kontiki-brown;
+	background-image: url("/wp-content/themes/hanna/images/wood_texture.jpg");
+	background-position: center center;
+}
+
+article.page > .entry-header > .entry-title {
+	color: $sc-page-headings-text;
+	text-align: center;
+}
+.kontiki article.page > .entry-header > .entry-title {
+	color: #fff;
+}
+
+.entry-subtitle {
+	color: $sc-page-headings-text;
+	text-align: center;
+	font-weight: 400;
+	margin-top: 1em;
+	font-family: "Capriola", serif;
+}
+@media (max-width: 48em) {
+	article.page > .entry-header {
+		padding: 1em;
+	}
+}
+
+
+
+/* ==========================================================================
+   OVERRIDE MAX-WIDTH 560 SETTINGS TO 640
+   ========================================================================== */
+.single-post-navigation > span,
+.single .entry-content,
+.single .entry-summary,
+.commentlist,
+.comment-respond,
+.page-template-template-contact-php .page .entry-content,
+.contactform {
+	max-width: 640px;
+}
+/* And set max-width for entire site at 1400px
+   ========================================================================== */
+#container, #masthead {
+	max-width: 1400px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* ==========================================================================
+   TWEAKS
+   ========================================================================== */
+
+.single .entry-footer {
+	padding-bottom: 0;
+}
+
+hr.hr-center {
+	margin: 30px 0 40px;
+}
+.contact-extras {
+	background-color: #eeeeee;
+}
+.zilla-tweet-widget ul {
+	text-align: left;
+}
+.zilla-tweet-widget li {
+	padding: 1em;
+}
+.zilla-tweet-widget li:nth-child(odd) {
+	background-color: #d9d9d9;
+}
+.zilla-tweet-widget li:nth-child(even) {
+	background-color: #f0f0f0;
+}
+@media (max-width: 48em) {
+	.footer-widgets-wrap {
+		max-width: 480px;
+	}
+}
+.footer-widgets {
+	background-color: #f5f5f5;
+}
+
+.site-footer .social a {
+	height: 48px;
+	width: 48px;
+}
+
+
+/* ==========================================================================
+   HOME PAGE TWEAKS
+   ========================================================================== */
+.home .format-standard .entry-title, .home .format-gallery .entry-title  {
+	font-family: "Pacifico", serif;
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: normal;
+}
+
+
+#tablepress-3 .row-2 .column-3, #tablepress-3 .row-2 .column-4, #tablepress-3 .row-2 .column-5 {
+	text-align: center;
+}
+#tablepress-3 :not(.row-2) .column-2 {
+	text-align: center;
+}
+#tablepress-3 .column-3, #tablepress-3 .column-4, #tablepress-3 .column-5 {
+	text-align: right;
+}
+#tablepress-3 .row-1 .column-3 {
+	text-align: center;
+}
+
+/* Reduce heading font sizes on small screens...
+   ========================================================================== */
+@media (max-width: 48em) {
+	.entry-title {
+		font-size: 36px;
+		font-size: 3.6rem;
+	}
+	h3 {
+		font-size: 22px;
+		font-size: 2.2rem;
+	}
+
+
+}
+
+
+/* ==========================================================================
+   DON'T ALLOW LINES TO BREAK ON ANCHORS WITHIN PANELS
+   ========================================================================== */
+.panel a {
+	white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   POR QUE FOOTER ACCORDION
+   ========================================================================== */
+.footer__porque {
+	background-color: $footer-porque-background;
+	text-align: center;
+	margin-bottom: 0;
+	color: $footer-porque-text;
+	padding: 0;
+    -webkit-transition: max-height 1s; 
+    -moz-transition: max-height 1s; 
+    -ms-transition: max-height 1s; 
+    -o-transition: max-height 1s; 
+    transition: max-height 1s;
+    overflow-y: hidden;
+}
+.footer__porque h3 {
+	color: $footer-porque-text;
+	cursor: pointer;
+	margin-bottom: 0;
+	padding: 1em 0;
+	border-bottom: 1px solid $footer-porque-border;
+}
+
+
+.footer__porque h3:before, .footer__porque h3:after {
+	content: "\00bf";
+	color: #fff;
+	background-color: $sc-brand-crimson;
+	border-radius: 50%;
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	margin: 0 4px;
+	line-height: 1.8;
+}
+.footer__porque h3:after {
+	content: "?";
+}
+
+.footer__porque:hover {
+	background-color: $footer-porque-border;
+}
+/*.footer__porque:hover h3, .footer__porque:hover h3:before, .footer__porque:hover h3:after {
+	color: #e0e0e0;
+}*/
+.footer__porque:hover h3 {
+	border-bottom-color: $footer-porque-hover;
+}
+
+.footer__porque-text {
+	text-align: left;
+	padding: 2em;
+	background-color: $footer-porque-text-bkgd;
+}
+
+.footer__porque-text > .col-half {
+	font-size: 112.5%;
+	padding: 1em 5%;
+}
+
+.col-half {
+	width: 50%;
+	float: left;
+	margin: 0;
+}
+
+@media (max-width: 48em) {
+	.col-half {
+		width: 100%;
+		float: none;
+	}
+	.footer__porque-text > .col-half {
+		padding: 0 2.5%;
+	}
+}
+
+#post-el-dorado {
+	background-color: #666;
+	padding: 4em 0;
+	border-bottom: 1px solid #666;
+}
+.eldorado__title {
+	padding: 0 2em;
+}
+.eldorado__title > h1 {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 1em;
+}
+.eldorado__content h3 {
+	color: #e0e0e0;
+	font-size: 20px;
+	font-size: 2rem;
+}
+.eldorado__content {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+}
+
+/* Reservation form on Kontiki page
+   ========================================================================== */
+
+.ninja-forms-required-items {
+	margin-bottom: 1em;
+}
+.ninja-forms-form {
+	background-color: #eee;
+	padding: 1em;
+}
+.ninja-forms-form input {
+	padding: 0.5em;
+}
+.ninja-forms-form p {
+	margin-bottom: 0;
+}
+#ninja_forms_form_2_wrap > .ninja-forms-form-title {
+	background-color: $kontiki-brown;
+	color: #fff;
+	padding: 0.5em;
+	margin-bottom: 0;
+}
+#ninja_forms_form_2_cont {
+	padding-top: 1em;
+}
+
+/* Tweak logo image so expands/contracts with header on scroll
+   ========================================================================== */
+
+.site-logo img {
+	transition: height 0.1s ease;
+}
+
+@media (min-width: 48em) {
+	.site-logo img {
+		position: absolute;
+		top: 4px;
+		height: 107px;
+	}
+	.shrinkit .site-logo img {
+		height: 67px;
+	}
+}
+
+/* Tweak to add margin-bottom to inline images in post content
+   ========================================================================== */
+.entry-content > img {
+	margin-bottom: 1em;
+}
+
+/* Sidebar links etc.
+   ========================================================================== */
+.brand-logos img {
+	padding: 1em;
+}
+.sidebar-forecasts {
+	text-align: center;
+	padding-top: 2em;
+}
+.sidebar-forecasts > h3 {
+	color: $sc-brand-blue;
+}
+.widget-windguru {
+	max-width: 305px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.widget-forecasts {
+	padding-top: 1em;
+}
+
+
+
+.social--body {
+	text-align: center;
+	padding-top: 1em;
+}
+
+.social--body > h3 {
+	color: $sc-brand-blue;
+}
+
+.social--body a svg path {
+	fill: #999;
+}
+.social--body a:hover svg path {
+	fill: #F2505D;
+}
+
+
+.logo-in-text {
+	padding-left: 120px;
+	font-family: "Capriola", serif;
+	color: $sc-brand-blue;
+	display: none;
+	transition: padding 0.1s ease;
+}
+.shrinkit .logo-in-text {
+	padding-left: 80px;
+}
+@media (min-width: 1200px) {
+	.logo-in-text {
+		display: block;
+	}
+}
+.kontiki .logo-in-text {
+	padding-left: 88px;
+	color: $kontiki-brown;
+}
+.kontiki .shrinkit .logo-in-text {
+	padding-left: 60px;
+}
